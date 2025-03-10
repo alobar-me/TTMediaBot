@@ -132,8 +132,6 @@ dmypy.json
 *.so
 TeamTalk_DLL/
 TeamTalkPy/
-config.json
-*config.json
 *.dat
 *.log
 .*env/
