@@ -4,9 +4,9 @@ Requires=pulseaudio.service
 
 [Service]
 Type=simple
-WorkingDirectory=/opt/TTMediaBot
-ExecStart=/opt/TTMediaBot/TTMediaBot.sh -c /opt/TTMediaBot/config.json
-Restart=on-failure
+ExecStartPre=/bin/rm -f %h/TTMediaBotCache.dat
+ExecStart=/opt/TTMediaBot/TTMediaBot.sh -c %h/config.json
+Restart=always
 
 [Install]
 WantedBy=default.target
